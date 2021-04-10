@@ -2,10 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CmsRoutingModule } from './cms-routing.module';
+import { ShopComponent } from './shop/shop.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ShopComponent
+  ],
   imports: [
     CommonModule,
     CmsRoutingModule
