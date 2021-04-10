@@ -5,10 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DashboardComponent } from './layouts/dashboard/dashboard.component';
+import { CmsComponent } from './layouts/cms/cms.component';
+import { AuthComponent } from './layouts/auth/auth.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent,
+    CmsComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
