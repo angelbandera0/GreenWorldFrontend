@@ -1,1 +1,50 @@
-<p>login works!</p>
+<section [ngStyle]="{'background-image': 'url(../assets/img/bg-img/2.jpg)','min-height': '100vh','padding': '60px 0'}"
+  class="login-block">
+  <!-- Container-fluid starts -->
+  <div class="container">
+    <div class="row">
+      <div id="login" class="col col-md-6 offset-md-3">
+
+        <form name="form" (ngSubmit)="f.form.valid && onSubmit()" novalidate #f="ngForm" class="form-signin">
+          <br>
+          <div class="text-center">
+            <img src="../../../assets/img/core-img/logo.png" alt="">
+            <h1 class="h3 mb-3 font-weight-normal">Iniciar Sesión</h1>
+          </div>
+
+          <label for="inputEmail" class="">Correo:</label>
+          <input type="email" id="inputEmail" class="form-control" name="email" [(ngModel)]="form.email"
+            #email="ngModel" placeholder="Nombre de usuario" required autofocus>
+          <div *ngIf="email.invalid && (email.dirty)" class="alert alert-danger">
+            <div *ngIf="email.errors">El nombre de usuario es obligatorio.</div>
+          </div>
+          <label for="inputPassword" class="">Contraseña:</label>
+          <input type="password" id="inputPassword" class="form-control" name="password" [(ngModel)]="form.password"
+            #password="ngModel" placeholder="Contraseña" required minlength="4">
+          <div *ngIf="password.invalid && (password.dirty)" class="alert alert-danger">
+            <div *ngIf="password.errors">Debe ingresar la contraseña.</div>
+            <div *ngIf="password.errors">La contraseña debe poseer más de 4 carácteres</div>
+          </div>
+          <br>
+
+          <div class="form-group">
+            <div>
+              <a class="btn btn-default" (click)="signInWithGoogle()">
+                <img width="15px" style="margin-bottom:3px; margin-right:5px" alt="Google login"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                Sign in with Google
+              </a>
+            </div>
+            <br>
+            <button class="alazea-btn btn-block" type="submit">Iniciar Sesión</button>
+            <!--<button class="btn alazea-btn btn-block" type="submit"><i class="fa fa-refresh fa-spin"></i></button>-->
+          </div>
+          <!--<p class="mt-5 mb-3 text-muted">&copy; 2017-2020</p>-->
+        </form>
+      </div>
+      <!-- end of col-sm-12 -->
+    </div>
+    <!-- end of row -->
+  </div>
+  <!-- end of container-fluid -->
+</section>

@@ -8,6 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DashboardComponent } from './layouts/dashboard/dashboard.component';
 import { CmsComponent } from './layouts/cms/cms.component';
 import { AuthComponent } from './layouts/auth/auth.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { AuthComponent } from './layouts/auth/auth.component';
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({}, {}),
+    HttpClientModule,
     NgbModule
   ],
   providers: [],
